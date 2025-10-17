@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <title>PASSO — Luxury apartments in the heart of Dubai</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Aboreto&display=swap" rel="stylesheet">
+
+    <meta name="color-scheme" content="light only"/>
+</head>
+<body class="font-sans text-text antialiased bg-white overflow-x-hidden">
+<header class="absolute inset-x-0 top-0 z-30">
+    <div class="container-1200 h-[3.5rem] md:h-[4rem] flex items-center justify-end text-white/90">
+        <nav class="hidden md:flex items-center gap-[1.25rem] text-sm">
+            <a href="#features" class="hover:opacity-80">Infrastructure</a>
+            <a href="#units" class="hover:opacity-80">Apartments</a>
+            <a href="#gallery" class="hover:opacity-80">Gallery</a>
+            <a href="#contact" class="hover:opacity-80">Contacts</a>
+        </nav>
+
+        <button id="burger" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false"
+                class="md:hidden inline-flex items-center justify-center w-10 h-10">
+            <!-- SVG burger -->
+            <svg width="35" height="24" viewBox="0 0 35 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect width="35" height="4" rx="2" fill="white"/>
+                <rect y="10" width="35" height="4" rx="2" fill="white"/>
+                <rect y="20" width="35" height="4" rx="2" fill="white"/>
+            </svg>
+        </button>
+    </div>
+
+    <div id="menuBackdrop" class="fixed inset-0 z-40 bg-black/50 opacity-0 pointer-events-none transition-opacity duration-300"></div>
+
+    <aside id="mobileMenu" aria-hidden="true"
+           class="fixed inset-y-0 right-0 z-50 w-[78%] max-w-[22rem] translate-x-full
+                bg-[#8C7A72]/95 backdrop-blur-sm text-white transition-transform duration-300">
+        <div class="relative h-full p-6 flex flex-col">
+            <button id="menuClose" aria-label="Close menu" class="absolute right-4 top-4">
+                <!-- SVG cross -->
+                <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M22.2465 0.666915C22.3962 0.517161 22.5741 0.398368 22.7698 0.317321C22.9655 0.236275 23.1752 0.194561 23.387 0.194561C23.5988 0.194561 23.8086 0.236275 24.0043 0.317321C24.2 0.398368 24.3778 0.517161 24.5276 0.666915C24.6773 0.81667 24.7962 0.994455 24.8772 1.19012C24.9583 1.38578 25 1.59549 25 1.80728C25 2.01906 24.9583 2.22878 24.8772 2.42444C24.7962 2.6201 24.6773 2.79789 24.5276 2.94764L14.7851 12.6913L24.5276 22.4349L24.7355 22.6877C24.9387 22.9982 25.0288 23.3691 24.9906 23.7381C24.9525 24.1072 24.7885 24.4518 24.5261 24.7142C24.2637 24.9765 23.919 25.1405 23.5499 25.1787C23.1808 25.2168 22.8098 25.1267 22.4993 24.9235L22.2465 24.7157L12.5012 14.972L2.75597 24.7185C2.60601 24.8682 2.42801 24.987 2.23214 25.068C2.03628 25.1489 1.82638 25.1906 1.61443 25.1904C1.40248 25.1903 1.19263 25.1484 0.996861 25.0672C0.801094 24.986 0.623244 24.867 0.473465 24.7171C0.323686 24.5671 0.204911 24.3892 0.123922 24.1933C0.0429322 23.9975 0.00131483 23.7876 0.00144527 23.5757C0.0015757 23.3638 0.0434514 23.154 0.124682 22.9583C0.205912 22.7625 0.324906 22.5847 0.47487 22.4349L10.2201 12.6913L0.47206 2.94764L0.266986 2.69485C0.0621835 2.38447 -0.0292223 2.01293 0.00820129 1.64296C0.0456249 1.273 0.209585 0.927287 0.472399 0.664186C0.735214 0.401084 1.08078 0.236717 1.45076 0.198835C1.82073 0.160953 2.19244 0.251878 2.50314 0.456257L2.75597 0.666915L12.5012 10.4078L22.2465 0.666915Z" fill="white"/>
+                </svg>
+            </button>
+
+            <nav class="mt-14 space-y-8 text-[20px] font-medium tracking-wide">
+                <a href="#features" class="block">Infrastructure</a>
+                <a href="#units" class="block">Apartment</a>
+                <a href="#gallery" class="block">Gallery</a>
+                <a href="#contact" class="block">Contacts</a>
+            </nav>
+        </div>
+    </aside>
+</header>
+
+<section class="relative text-white">
+    <picture>
+        <source media="(min-width: 768px)" srcset="/assets/images/hero_bg.jpg">
+        <img src="/assets/images/hero_mob_bg.jpg" alt="" class="w-full h-[50rem] md:h-[40rem] lg:h-[59rem] object-cover">
+    </picture>
+
+    <div class="absolute inset-0">
+        <div class="container-1200 h-full relative">
+            <!-- chips -->
+            <div class="absolute top-[44%] left-1/2 -translate-x-1/2 flex gap-[0.75rem]">
+                <div class="px-4 py-2 rounded-[0.75rem] bg-black/50 backdrop-blur-sm text-white/95 text-sm">September 2029</div>
+                <div class="px-4 py-2 rounded-[0.75rem] bg-black/50 backdrop-blur-sm text-white/95 text-sm">AED 4,635,000</div>
+            </div>
+
+            <!-- нижняя плашка -->
+            <div class="absolute bottom-[2.5rem] left-0 right-0">
+                <div class="flex items-center justify-between gap-[1rem]">
+                    <div class="backdrop-blur-sm bg-white/10 rounded-[0.75rem] px-[1rem] py-[0.75rem]">
+                        <span class="text-[1.5rem] md:text-[1.75rem] font-semibold">Passo by Beyond</span>
+                    </div>
+                    <a href="#contact" class="btn btn-primary !rounded-[999px]">Arrange a viewing</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container-1440 px-0 grid md:grid-cols-[minmax(0,32rem)_1fr] items-center gap-[1.75rem]">
+        <div class="w-full mx-auto max-w-[26rem] text-center md:mr-[calc((100vw-86rem)/-2)]">
+      <span class="inline-block px-[0.875rem] py-[0.375rem] rounded-full bg-black/[0.06] text-black/70 font-semibold
+                   text-[clamp(0.625rem,0.5rem+0.4vw,0.8125rem)] mb-[1rem]">About Passo</span>
+
+            <h2 class="font-semibold tracking-tight leading-[1.18]
+                 text-[clamp(1.5625rem,1.2rem+1.2vw,2.1875rem)]">
+                Luxury apartments<br>in the heart of Dubai
+            </h2>
+
+            <p class="mt-[0.875rem] text-black/70 leading-relaxed
+                text-[clamp(0.875rem,0.8rem+0.3vw,1rem)]">
+                The complex consists of two sculptural towers — Avita and Bella, each of which includes two
+                underground levels, a first floor, fourteen residential floors and a roof. The project features one,
+                two, three and four-bedroom apartments, exclusive five-bedroom penthouses, and separate six-bedroom
+                mansions.
+            </p>
+
+            <a href="#contact"
+               class="w-full md:w-auto inline-flex items-center justify-center mt-[1.25rem]
+          px-[1.5rem] md:px-[1.75rem] py-[0.75rem] md:py-[0.875rem]
+          rounded-[999px] text-white font-semibold
+          text-[clamp(0.9375rem,0.85rem+0.5vw,1.25rem)] bg-brand1 hover:bg-brand1/55 transition">
+                Contact us
+            </a>
+        </div>
+
+        <div class="hidden md:block w-full ml-auto max-w-none md:mr-[calc((100vw-1000px)/-2)] overflow-hidden rounded-l-[1.25rem]">
+            <img src="/assets/images/about.jpg" alt="" class="block w-[41rem] h-[24rem] lg:h-[41rem] object-cover">
+        </div>
+    </div>
+</section>
+
+<section class="section pt-0">
+    <div class="container-1200 px-0">
+        <div class="container-bleed max-w-[100vw] overflow-x-hidden">
+            <div class="relative overflow-hidden" data-carousel="wideGallery">
+                <div class="flex transition-transform duration-300 ease-out" data-carousel-track>
+                    <div class="w-full shrink-0">
+                        <img src="/assets/images/complex/complex_1.jpg" alt="Passo view 1"
+                             class="w-full h-[40rem] md:h-[30rem] lg:h-[45rem] object-cover">
+                    </div>
+                    <div class="w-full shrink-0">
+                        <img src="/assets/images/complex/complex_1.jpg" alt="Passo view 2"
+                             class="w-full h-[40rem] md:h-[30rem] lg:h-[45rem] object-cover">
+                    </div>
+                    <div class="w-full shrink-0">
+                        <img src="/assets/images/complex/complex_1.jpg" alt="Passo view 3"
+                             class="w-full h-[40rem] md:h-[30rem] lg:h-[45rem] object-cover">
+                    </div>
+                </div>
+
+                <button type="button"
+                        class="absolute left-[0.35rem] bottom-[1rem] lg:left-[11rem] lg:bottom-[2rem] grid place-items-center w-[3rem] h-[3rem] rounded-full
+                       bg-black/60 text-white text-[1.25rem] hover:bg-black/70 transition"
+                        aria-label="Previous slide" data-carousel-prev>
+                    <svg width="16" height="17" viewBox="0 0 16 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13.9997 2L2.07422 14.5L13.9997 27" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <button type="button"
+                        class="absolute right-[0.25rem] bottom-[1rem] lg:right-[11rem] lg:bottom-[2rem] grid place-items-center w-[3rem] h-[3rem] rounded-full
+                       bg-black/60 text-white text-[1.25rem] hover:bg-black/70 transition"
+                        aria-label="Next slide" data-carousel-next>
+                    <svg width="17" height="17" viewBox="0 0 17 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.18586 2L14.1113 14.5L2.18586 27" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+
+                <div class="hidden" data-carousel-dots></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container-1200">
+        <div class="text-center max-w-[56rem] mx-auto mb-[3.25rem]">
+            <h3 class="font-semibold leading-tight text-[clamp(1.5625rem,1.2rem+1.2vw,2.1875rem)]">
+                Located on Palm Jumeirah, Dubai
+            </h3>
+            <p class="mt-[0.375rem] text-black/70 text-[clamp(0.875rem,0.8rem+0.5vw,1.25rem)]">
+                This landmark project includes three multi-storey towers.
+            </p>
+        </div>
+
+        <div class="grid md:grid-cols-3 md:grid-rows-2 gap-[0.9375rem] md:gap-[1.25rem]">
+            <div class="rounded-[1.75rem] p-[1.25rem] text-white flex flex-col justify-between md:row-span-2 bg-brand3 h-[200px] md:h-auto">
+                <div class="text-[clamp(1.125rem,1rem+0.3vw,1.25rem)] opacity-90">Starting Price</div>
+                <div class="mt-[0.5rem]">
+                    <div class="font-semibold leading-none text-[clamp(1.75rem,1.6rem+0.4vw,2rem)]">AED</div>
+                    <div class="font-semibold leading-[0.95] text-[clamp(2.5rem,2rem+2vw,3.75rem)]">4,635&nbsp;000</div>
+                </div>
+            </div>
+
+            <div class="rounded-[1.75rem] px-[1.5rem] py-[2.25rem] text-white bg-brand2 md:col-span-2
+                  flex flex-col justify-between h-[200px] md:h-auto md:flex-row md:items-center md:justify-between">
+                <div class="text-[clamp(1.75rem,1.6rem+0.4vw,2rem)] font-medium order-2 md:order-1 whitespace-nowrap">
+                    Apartment, Duplex
+                </div>
+                <div class="text-[clamp(1.125rem,1rem+0.3vw,1.25rem)] opacity-90 order-1 md:order-2">
+                    Property Type
+                </div>
+            </div>
+
+            <div class="rounded-[1.75rem] p-[1.25rem] text-white flex flex-col justify-between bg-brand1 h-[200px] md:h-auto">
+                <div class="text-[clamp(1.125rem,1rem+0.3vw,1.25rem)] opacity-90">Delivery Date</div>
+                <div class="mt-[0.5rem] font-medium text-[clamp(1.75rem,1.6rem+0.4vw,2rem)]">September 2029</div>
+            </div>
+
+            <div class="rounded-[1.75rem] p-[2.25rem] text-white flex flex-col justify-between bg-brand4 h-[200px] md:h-auto">
+                <div class="text-[clamp(1.125rem,1rem+0.3vw,1.25rem)] opacity-90">Master Developer</div>
+                <div class="mt-[0.5rem] font-medium text-[clamp(1.75rem,1.6rem+0.4vw,2rem)]">Beyond by Omniyat</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section pt-0">
+    <div class="container-bleed max-w-[100vw] overflow-x-hidden">
+        <div class="px-[1.25rem] md:px-0">
+            <h3 class="font-semibold leading-tight mb-[3.25rem]
+                 text-[clamp(1.5625rem,1.2rem+1.2vw,2.1875rem)] text-center">
+                Infrastructure and landscaping of the residential complex
+            </h3>
+
+            <div class="grid md:grid-cols-3 gap-2 md:gap-[0.2rem]">
+                <figure class="relative rounded-[1rem] md:rounded-none overflow-hidden">
+                    <img src="/assets/images/complex/infra/infra_1.jpg" class="w-full h-[14rem] md:h-[40rem] object-cover" alt="">
+                    <div class="absolute inset-0 pointer-events-none bg-[linear-gradient(180deg,rgba(0,0,0,0.25)_0%,rgba(0,0,0,0.0)_40%,rgba(0,0,0,0.35)_100%)]"></div>
+                    <figcaption class="absolute bottom-0 inset-x-0 p-[0.75rem] md:p-[1rem] text-white font-medium text-[20px] md:text-[30px] bg-gradient-to-t from-black/60 to-transparent">
+                        Swimming pool
+                    </figcaption>
+                </figure>
+
+                <figure class="relative rounded-[1rem] md:rounded-none overflow-hidden">
+                    <img src="/assets/images/complex/infra/infra_2.jpg" class="w-full h-[14rem] md:h-[40rem] object-cover" alt="">
+                    <div class="absolute inset-0 pointer-events-none bg-[linear-gradient(180deg,rgba(0,0,0,0.25)_0%,rgba(0,0,0,0.0)_40%,rgba(0,0,0,0.35)_100%)]"></div>
+                    <figcaption class="absolute bottom-0 inset-x-0 p-[0.75rem] md:p-[1rem] text-white font-medium text-[20px] md:text-[30px] bg-gradient-to-t from-black/60 to-transparent">
+                        Gymnasium
+                    </figcaption>
+                </figure>
+
+                <figure class="relative rounded-[1rem] md:rounded-none overflow-hidden">
+                    <img src="/assets/images/complex/infra/infra_3.jpg" class="w-full h-[14rem] md:h-[40rem] object-cover" alt="">
+                    <div class="absolute inset-0 pointer-events-none bg-[linear-gradient(180deg,rgba(0,0,0,0.25)_0%,rgba(0,0,0,0.0)_40%,rgba(0,0,0,0.35)_100%)]"></div>
+                    <figcaption class="absolute bottom-0 inset-x-0 p-[0.75rem] md:p-[1rem] text-white font-medium text-[20px] md:text-[30px] bg-gradient-to-t from-black/60 to-transparent">
+                        Children’s play area
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="section pt-0">
+    <div class="container-1200">
+        <h3 class="text-center font-semibold leading-tight mb-[1rem]
+               text-[clamp(1.5625rem,1.2rem+1.2vw,2.1875rem)]">
+            Available Units
+        </h3>
+
+        <div class="relative overflow-hidden rounded-[1rem]" data-carousel="unitsSlider">
+            <div class="flex transition-transform duration-300 ease-out" data-carousel-track>
+                <div class="w-full shrink-0">
+                    <figure class="relative">
+                        <img src="/assets/unit-hero.jpg" alt="1 Bedroom — interior"
+                             class="w-full h-[18rem] sm:h-[22rem] md:h-[32rem] lg:h-[40rem] object-cover">
+
+                        <div
+                                class="hidden md:flex absolute inset-x-[1rem] bottom-[1rem] items-center gap-4
+                     bg-black/45 text-white rounded-full px-5 py-4 backdrop-blur-sm">
+
+                            <div class="shrink-0 inline-flex items-center gap-2 text-[0.95rem]">
+                                <span class="px-4 py-2 rounded-full bg-black/35">1 Bedroom</span>
+                                <span class="opacity-80">|</span><span>2</span>
+                                <span class="opacity-80">|</span><span>3</span>
+                                <span class="opacity-80">|</span><span>4</span>
+                            </div>
+                            <div class="mx-1 h-6 w-px bg-white/30"></div>
+                            <div class="flex items-center gap-6 text-[1rem] whitespace-nowrap">
+                                <span class="font-medium">AED 1,260,000</span>
+                                <span class="opacity-90">From 931 SQFT</span>
+                            </div>
+                            <!-- CTA -->
+                            <a href="#contact"
+                               class="ml-auto inline-flex items-center justify-center rounded-full
+                        bg-white text-[#6F6058] hover:opacity-90
+                        px-6 py-[14px]">
+                                Book a consultation
+                            </a>
+                        </div>
+
+                        <div class="md:hidden absolute left-3 right-3 bottom-3">
+                            <div class="flex justify-between gap-3 bg-black/45 text-white rounded-[1rem] px-4 py-3 backdrop-blur-sm">
+                                <div class="text-sm">
+                                    <div class="inline-flex items-center gap-2">
+                                        <span class="px-3 py-1 rounded-full bg-black/35 text-xs">1 Bedroom</span>
+                                        <span class="opacity-80">2 | 3 | 4</span>
+                                    </div>
+                                </div>
+                                <div class="text-right text-sm leading-tight">
+                                    <div class="font-medium">AED 1,260,000</div>
+                                    <div class="opacity-90">From 931 SQFT</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button type="button" aria-label="Previous"
+                                class="absolute left-3 bottom-3 md:left-4 md:bottom-4 grid place-items-center
+                           w-10 h-10 rounded-full bg-black/55 text-white hover:bg-black/70 transition"
+                                data-carousel-prev>
+                            <svg width="16" height="17" viewBox="0 0 16 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M13.9997 2L2.07422 14.5L13.9997 27" stroke="white" stroke-width="4"
+                                      stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <button type="button" aria-label="Next"
+                                class="absolute right-3 bottom-3 md:right-4 md:bottom-4 grid place-items-center
+                           w-10 h-10 rounded-full bg-black/55 text-white hover:bg-black/70 transition"
+                                data-carousel-next>
+                            <svg width="17" height="17" viewBox="0 0 17 29" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.18586 2L14.1113 14.5L2.18586 27" stroke="white" stroke-width="4"
+                                      stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                    </figure>
+                </div>
+                <div class="w-full shrink-0">
+                    <img src="/assets/unit-2.jpg" alt="" class="w-full h-[18rem] sm:h-[22rem] md:h-[32rem] lg:h-[40rem] object-cover">
+                </div>
+                <div class="w-full shrink-0">
+                    <img src="/assets/unit-3.jpg" alt="" class="w-full h-[18rem] sm:h-[22rem] md:h-[32rem] lg:h-[40rem] object-cover">
+                </div>
+            </div>
+        </div>
+
+        <div class="md:hidden mt-4">
+            <a href="#contact"
+               class="w-full inline-flex items-center justify-center rounded-full
+                bg-[#8C7A72] text-white hover:opacity-90
+                px-6 py-[25px]">
+                Arrange a viewing
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container-1200 lg:max-w-[90rem] !px-0">
+        <div class="relative overflow-hidden h-[43rem] md:h-[39rem] md:rounded-[1.5rem] md:p-[1.25rem]">
+            <picture class="pointer-events-none">
+                <source media="(min-width: 768px)" srcset="/assets/images/map-desktop.jpg">
+                <img src="/assets/images/map-mobile.jpg" alt="" class="absolute inset-0 w-full h-full object-cover">
+            </picture>
+
+            <!-- контент -->
+            <div class="relative z-10 flex h-full">
+                <div
+                        class="self-start md:self-center max-w-[32.9rem] w-full
+                 bg-white/95 md:bg-white
+                 rounded-b-[1rem] md:rounded-b-[3.5rem]
+                 pt-[25px] pb-[37px] pl-[25px] pr-[28px]
+                 md:pt-[77px] md:pb-[73px] md:pl-[71px] md:pr-[61px] ml-9 mr-9 md:ml-12 md:-mt-[180px]">
+
+                    <span class="block w-[72px] md:w-[112px] h-[3px] bg-black/70 mb-[0.75rem] md:mb-[1rem]"></span>
+
+                    <h3 class="font-semibold leading-tight mb-6 text-[clamp(1.625rem,1.1rem+3vw,2.5rem)]">
+                        Location<br /> in Dubai
+                    </h3>
+
+                    <p class="mt-[0.75rem] md:mt-[0.875rem] text-black/70 leading-relaxed text-[0.9rem] md:text-[1.125rem]">
+                        Palm Jumeirah’s West Crescent looks out toward the Persian Gulf and back onto Dubai’s glowing skyline.
+                    </p>
+                    <p class="mt-[0.5rem] text-black/70 leading-relaxed text-[0.9rem] md:text-[1.125rem]">
+                        From Atlantis The Royal to Nakheel Mall, everything is within reach here.
+                    </p>
+                </div>
+
+                <div class="hidden md:block flex-1"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="relative">
+        <img src="/assets/images/contact-bg.jpg" class="w-full h-[44rem] object-cover" alt="">
+
+        <div class="absolute inset-0">
+            <div class="container-1200 h-full flex items-center">
+                <div class="max-w-[28rem] w-full text-white">
+                    <div class="space-y-3 md:space-y-4 my-10">
+                        <div class="flex items-center gap-7 lg:gap-4">
+                            <span class="font-regular leading-tight text-[3rem] lg:text-[4.15rem]">Any other</span>
+                            <span class="h-[2px] flex-1 bg-white/60"></span>
+                        </div>
+                        <div class="flex items-center gap-7 lg:gap-4">
+                            <span class="h-[2px] flex-1 bg-white/60"></span>
+                            <span class="font-regular leading-tight text-[3rem] lg:text-[4.15rem]">questions?</span>
+                        </div>
+                    </div>
+
+                    <form class="mt-[1.25rem] md:mt-[1.75rem] flex flex-col gap-[20px]">
+                        <input
+                                class="input-pill !w-full !rounded-[999px] !px-6 py-[25px] md:py-[30px]
+                     !bg-white/85 !text-black placeholder:!text-black/60
+                     focus:!ring-0 focus:!outline-none text-center"
+                                placeholder="Phone number" />
+
+                        <button
+                                class="btn !rounded-[999px] !px-6 py-[25px] md:py-[30px]
+                     bg-brand1 hover:bg-brand1/90 !text-white text-center justify-center">
+                            Arrange a viewing
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="bg-footer text-white">
+    <div
+            class="container-1200 py-[60px] md:py-[50px]
+           flex flex-col space-y-6
+           md:space-y-0 md:grid md:grid-cols-[1fr_auto] md:grid-rows-[auto_auto_auto] gap-y-10 md:gap-x-6">
+
+        <div class="order-1 md:order-none flex md:block items-center md:justify-start">
+            <div class="text-[4rem] leading-none tracking-[0.15em] font-semibold"
+                 style="font-family:'Aboreto',cursive;">
+                PASSO
+            </div>
+        </div>
+
+        <div class="order-4 md:order-none md:col-start-2 md:row-start-1 md:justify-self-end
+                flex flex-col md:flex-row items-stretch md:items-center gap-3">
+            <a href="tel:+79999999999"
+               class="inline-flex items-center justify-center rounded-[999px] border border-white/60 text-white
+                px-6 py-3 md:min-w-[278px] hover:bg-white/50">
+                <svg class="mr-2 shrink-0" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                     xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.11 4.2 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.12.89.31 1.76.57 2.6a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.48-1.14a2 2 0 0 1 2.11-.45c.84.26 1.71.45 2.6.57A2 2 0 0 1 22 16.92Z"
+                          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                +7 999 999 99 99
+            </a>
+
+            <a href="#contact"
+               class="inline-flex items-center justify-center rounded-[999px] border border-white/60 text-white
+                px-6 py-3 md:min-w-[278px] hover:bg-white/50">
+                Contact us
+            </a>
+        </div>
+
+        <div class="order-2 md:order-none md:col-start-1 md:row-start-2">
+            <div class="text-[1.5rem] md:text-[1.75rem] font-medium">
+                Luxury apartments in the heart of Dubai
+            </div>
+        </div>
+
+        <nav class="order-3 md:order-none md:col-start-2 md:row-start-2 md:justify-self-end
+                flex flex-wrap gap-5 text-white/85 text-[14px]">
+            <a href="#features" class="hover:opacity-80">Infrastructure</a>
+            <a href="#units" class="hover:opacity-80">Apartment</a>
+            <a href="#gallery" class="hover:opacity-80">Gallery</a>
+            <a href="#contact" class="hover:opacity-80">Contacts</a>
+        </nav>
+
+        <div class="hidden md:block md:col-start-1 md:row-start-3 mt-2 text-sm text-white/75">
+            Powered by Zack AI
+        </div>
+    </div>
+</footer>
+
+<script type="module" src="/src/main.js"></script>
+</body>
+</html>

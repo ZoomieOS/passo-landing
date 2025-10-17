@@ -1,0 +1,51 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { font-size: 16px; }
+
+.container-1200 { @apply max-w-container mx-auto px-[1rem]; }
+
+.container-1440 { @apply max-w-containerWide mx-auto px-[1rem]; }
+
+.container-fluid { @apply w-full max-w-none mx-auto px-[1rem]; }
+
+.container-bleed {
+    width: 100vw;
+    max-width: none;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+.section { @apply py-section; }
+
+.h1 { @apply text-5xl font-semibold tracking-tight; }
+.h2 { @apply text-3xl font-semibold; }
+.h3 { @apply text-xl font-semibold; }
+
+.btn { @apply inline-flex items-center gap-[0.5rem] rounded-[0.5rem] px-[1rem] py-[0.75rem] text-base font-semibold transition; }
+.btn-primary { @apply bg-brand2 text-white hover:opacity-90; }
+.btn-outline { @apply border border-text text-text hover:bg-black hover:text-white; }
+.card { @apply rounded-[1rem] border border-black/10 bg-white shadow-sm; }
+.label { @apply text-sm uppercase tracking-wide text-black/60; }
+
+/* Заглушки / фоны */
+.bg-hero { background: linear-gradient(180deg, rgba(0,0,0,0.35) 0%, rgba(0,0,0,0.55) 100%), url('/assets/hero.jpg') center/cover no-repeat; }
+
+/* Карусель: helper классы (доп. к tailwind) */
+.carousel-dot { @apply size-[0.5rem] rounded-full border border-white/70; }
+
+/* Плашки в hero */
+.hero-chip {
+    @apply backdrop-blur-sm bg-white/15 text-white text-sm font-medium px-[0.875rem] py-[0.5rem] rounded-[0.75rem] shadow-sm;
+}
+
+.input-pill {
+    @apply w-full rounded-[999px] px-[1rem] py-[0.75rem] text-black placeholder:text-black/50 bg-white/95 focus:outline-none;
+}
+
+figure:hover img { transform: scale(1.01); }
+figure img { transition: transform 200ms ease; }
