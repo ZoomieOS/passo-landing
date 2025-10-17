@@ -23,7 +23,7 @@
 
         <button id="burger" aria-label="Open menu" aria-controls="mobileMenu" aria-expanded="false"
                 class="md:hidden inline-flex items-center justify-center w-10 h-10">
-            <!-- SVG burger -->
+
             <svg width="35" height="24" viewBox="0 0 35 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <rect width="35" height="4" rx="2" fill="white"/>
                 <rect y="10" width="35" height="4" rx="2" fill="white"/>
@@ -39,7 +39,6 @@
                 bg-[#8C7A72]/95 backdrop-blur-sm text-white transition-transform duration-300">
         <div class="relative h-full p-6 flex flex-col">
             <button id="menuClose" aria-label="Close menu" class="absolute right-4 top-4">
-                <!-- SVG cross -->
                 <svg width="25" height="26" viewBox="0 0 25 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M22.2465 0.666915C22.3962 0.517161 22.5741 0.398368 22.7698 0.317321C22.9655 0.236275 23.1752 0.194561 23.387 0.194561C23.5988 0.194561 23.8086 0.236275 24.0043 0.317321C24.2 0.398368 24.3778 0.517161 24.5276 0.666915C24.6773 0.81667 24.7962 0.994455 24.8772 1.19012C24.9583 1.38578 25 1.59549 25 1.80728C25 2.01906 24.9583 2.22878 24.8772 2.42444C24.7962 2.6201 24.6773 2.79789 24.5276 2.94764L14.7851 12.6913L24.5276 22.4349L24.7355 22.6877C24.9387 22.9982 25.0288 23.3691 24.9906 23.7381C24.9525 24.1072 24.7885 24.4518 24.5261 24.7142C24.2637 24.9765 23.919 25.1405 23.5499 25.1787C23.1808 25.2168 22.8098 25.1267 22.4993 24.9235L22.2465 24.7157L12.5012 14.972L2.75597 24.7185C2.60601 24.8682 2.42801 24.987 2.23214 25.068C2.03628 25.1489 1.82638 25.1906 1.61443 25.1904C1.40248 25.1903 1.19263 25.1484 0.996861 25.0672C0.801094 24.986 0.623244 24.867 0.473465 24.7171C0.323686 24.5671 0.204911 24.3892 0.123922 24.1933C0.0429322 23.9975 0.00131483 23.7876 0.00144527 23.5757C0.0015757 23.3638 0.0434514 23.154 0.124682 22.9583C0.205912 22.7625 0.324906 22.5847 0.47487 22.4349L10.2201 12.6913L0.47206 2.94764L0.266986 2.69485C0.0621835 2.38447 -0.0292223 2.01293 0.00820129 1.64296C0.0456249 1.273 0.209585 0.927287 0.472399 0.664186C0.735214 0.401084 1.08078 0.236717 1.45076 0.198835C1.82073 0.160953 2.19244 0.251878 2.50314 0.456257L2.75597 0.666915L12.5012 10.4078L22.2465 0.666915Z" fill="white"/>
                 </svg>
@@ -58,26 +57,39 @@
 <section class="relative text-white">
     <picture>
         <source media="(min-width: 768px)" srcset="/assets/images/hero_bg.jpg">
-        <img src="/assets/images/hero_mob_bg.jpg" alt="" class="w-full h-[50rem] md:h-[40rem] lg:h-[59rem] object-cover">
+        <img src="/assets/images/hero_mob_bg.jpg" alt=""
+             class="w-full h-[50rem] md:h-[40rem] lg:h-[48rem] object-cover">
     </picture>
 
     <div class="absolute inset-0">
         <div class="container-1200 h-full relative">
-            <!-- chips -->
-            <div class="absolute top-[44%] left-1/2 -translate-x-1/2 flex gap-[0.75rem]">
-                <div class="px-4 py-2 rounded-[0.75rem] bg-black/50 backdrop-blur-sm text-white/95 text-sm">September 2029</div>
-                <div class="px-4 py-2 rounded-[0.75rem] bg-black/50 backdrop-blur-sm text-white/95 text-sm">AED 4,635,000</div>
-            </div>
+            <div class="absolute left-[1rem] md:left-0 bottom-[10rem] md:bottom-[9.5rem] flex gap-[0.75rem]">
+                <div class="px-4 py-3 rounded-[0.75rem] bg-black/55 backdrop-blur-sm">
+                    <div class="text-[0.95rem] font-medium leading-none">September 2029</div>
+                    <div class="text-[0.75rem] opacity-80 mt-[0.25rem]">Delivery Date</div>
+                </div>
 
-            <!-- нижняя плашка -->
-            <div class="absolute bottom-[2.5rem] left-0 right-0">
-                <div class="flex items-center justify-between gap-[1rem]">
-                    <div class="backdrop-blur-sm bg-white/10 rounded-[0.75rem] px-[1rem] py-[0.75rem]">
-                        <span class="text-[1.5rem] md:text-[1.75rem] font-semibold">Passo by Beyond</span>
-                    </div>
-                    <a href="#contact" class="btn btn-primary !rounded-[999px]">Arrange a viewing</a>
+                <div class="px-4 py-3 rounded-[0.75rem] bg-black/55 backdrop-blur-sm">
+                    <div class="text-[0.95rem] font-medium leading-none">AED 4,635,000</div>
+                    <div class="text-[0.75rem] opacity-80 mt-[0.25rem]">Launch price</div>
                 </div>
             </div>
+
+            <div class="absolute bottom-[1.5rem] left-[1rem] right-[1rem] md:left-0 md:right-0">
+                <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-[1rem]">
+                    <span class="text-[1.75rem] md:text-[2.5rem] lg:text-[3rem] font-semibold leading-tight">
+            Passo by Beyond
+          </span>
+
+                    <a href="#contact"
+                       class="md:ml-auto inline-flex items-center justify-center
+                    rounded-[999px] bg-[#8C7A72] hover:bg-[#8C7A72]/90 text-white
+                    px-6 md:py-[14px] w-full md:w-auto">
+                        Arrange a viewing
+                    </a>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
