@@ -29,7 +29,7 @@ export default {
                 sans: ["Montserrat", "ui-sans-serif", "system-ui", "-apple-system", "Segoe UI", "Roboto", "Ubuntu", "Cantarell", "Noto Sans", "sans-serif"]
             },
             spacing: {
-                section: "3.125rem"
+                section: "3.125rem",
             },
             fontSize: {
                 xs: ["0.75rem", { lineHeight: "1.125rem" }],
