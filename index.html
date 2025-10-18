@@ -382,43 +382,35 @@
 
 <section class="section">
     <div class="container-1200 lg:max-w-[90rem] !px-0">
-        <div class="relative overflow-hidden h-[43rem] md:h-[39rem] md:rounded-[1.5rem] md:p-[1.25rem]">
-            <picture class="pointer-events-none">
-                <source media="(min-width: 768px)" srcset="/assets/images/map-desktop.jpg">
-                <img src="/assets/images/map-mobile.jpg" alt="" class="absolute inset-0 w-full h-full object-cover">
-            </picture>
+        <div class="grid md:grid-cols-2 md:gap-[2rem] items-stretch overflow-hidden">
 
-            <div class="relative z-10 flex h-full">
-                <div
-                        class="self-start md:self-center max-w-[32.9rem] w-full
-                 bg-white/95 md:bg-white
-                 rounded-b-[1rem] md:rounded-b-[3.5rem]
-                 pt-[25px] pb-[37px] pl-[25px] pr-[28px]
-                 md:pt-[77px] md:pb-[73px] md:pl-[71px] md:pr-[61px] ml-9 mr-9 md:ml-12 md:-mt-[180px]">
+            <div
+                    class="
+               pt-[25px] pb-[37px] pl-[25px] pr-[28px]
+               md:pt-[77px] md:pb-[73px] md:pl-[71px] md:pr-[61px]">
+                <span class="block w-[72px] md:w-[112px] h-[3px] bg-black/70 mb-[0.75rem] md:mb-[1rem]"></span>
 
-                    <span class="block w-[72px] md:w-[112px] h-[3px] bg-black/70 mb-[0.75rem] md:mb-[1rem]"></span>
+                <h3 class="font-semibold leading-tight mb-6 text-[clamp(1.625rem,1.1rem+3vw,2.5rem)]">
+                    Location<br />in Dubai
+                </h3>
 
-                    <h3 class="font-semibold leading-tight mb-6 text-[clamp(1.625rem,1.1rem+3vw,2.5rem)]">
-                        Location<br /> in Dubai
-                    </h3>
+                <p class="mt-[0.75rem] md:mt-[0.875rem] text-black/70 leading-relaxed text-[0.9rem] md:text-[1.125rem]">
+                    Palm Jumeirah’s West Crescent looks out toward the Persian Gulf and back onto Dubai’s glowing skyline.
+                </p>
+                <p class="mt-[0.5rem] text-black/70 leading-relaxed text-[0.9rem] md:text-[1.125rem]">
+                    From Atlantis The Royal to Nakheel Mall, everything is within reach here.
+                </p>
+            </div>
 
-                    <p class="mt-[0.75rem] md:mt-[0.875rem] text-black/70 leading-relaxed text-[0.9rem] md:text-[1.125rem]">
-                        Palm Jumeirah’s West Crescent looks out toward the Persian Gulf and back onto Dubai’s glowing skyline.
-                    </p>
-                    <p class="mt-[0.5rem] text-black/70 leading-relaxed text-[0.9rem] md:text-[1.125rem]">
-                        From Atlantis The Royal to Nakheel Mall, everything is within reach here.
-                    </p>
-                </div>
-
-                <div class="flex-1">
-                    <iframe
-                            width="100%"
-                            height="100%"
-                            style="border:0;"
-                            loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade"
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.804178365103!2d55.138969!3d25.1121699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f14b01c5b733b%3A0x8b2a3c8580f20f4c!2sPalm%20Jumeirah%2C%20Dubai!5e0!3m2!1sen!2sae!4v1739781000000!5m2!1sen!2sae"> </iframe>
-                </div>
+            <div class="relative overflow-hidden h-[20rem] md:h-auto">
+                <iframe
+                        width="100%"
+                        height="100%"
+                        style="border:0;"
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3607.804178365103!2d55.138969!3d25.1121699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5f14b01c5b733b%3A0x8b2a3c8580f20f4c!2sPalm%20Jumeirah%2C%20Dubai!5e0!3m2!1sen!2sae!4v1739781000000!5m2!1sen!2sae">
+                </iframe>
             </div>
         </div>
     </div>
@@ -446,12 +438,12 @@
                         <input
                                 class="input-pill !w-full !rounded-[999px] !px-6 py-[25px] md:py-[30px]
                      !bg-white/85 !text-black placeholder:!text-black/60
-                     focus:!ring-0 focus:!outline-none text-center"
+                     focus:!ring-0 focus:!outline-none text-center text-[1rem] md:text-[1.3rem]"
                                 placeholder="Phone number" />
 
                         <button
                                 class="btn !rounded-[999px] !px-6 py-[25px] md:py-[30px]
-                     bg-brand1 hover:bg-brand1/90 !text-white text-center justify-center">
+                     bg-brand1 hover:bg-brand1/90 !text-white text-center justify-center text-[1rem] md:text-[1.3rem]">
                             Arrange a viewing
                         </button>
                     </form>
